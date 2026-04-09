@@ -8,7 +8,8 @@
           
         </div>
         <q-card-actions class="absolute-bottom titulo_nombre">
-        <q-btn flat v-for="(boton, index2) in curso.botones" :key="index2" class="botones q-mr-md bg-white"> {{ boton.nombre }} </q-btn>
+        <q-btn flat class="botones q-mr-md bg-white"> Duración  </q-btn>
+        <q-btn flat class="botones q-mr-md bg-white"> Información  </q-btn>
         
       </q-card-actions>
       </q-img>
@@ -55,8 +56,8 @@ traer_cursos()
   border-top: 1px solid rgba(151, 151, 151, 0.3);
   font-weight: bold;
     color: rgb(13, 50, 109);
-    
-   
+    width: 30%;
+    max-width: 114px;
   }
 .titulo_nombre{
     backdrop-filter: blur(40px);

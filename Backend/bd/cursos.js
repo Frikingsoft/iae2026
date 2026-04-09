@@ -25,25 +25,7 @@ const cursoSchema = new mongoose.Schema({
     type: [String],
     default: []
   },
-  botones: {
-    type: [
-      {
-        nombre: {
-          type: String,
-         
-        },
-        icono: {
-          type: String,
-        
-        },
-        url: {
-          type: String,
-         
-        }
-      }
-    ],
-   
-  }
+
 }, {
   timestamps: true 
 });

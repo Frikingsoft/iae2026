@@ -1,21 +1,7 @@
 import { Cursos } from "../bd/cursos.js"
-const datosCurso =  {
-    nombre: "Desarrollo Web Full Stack",
-    tipo: "Tecnología",
-    duracion: 9,
-    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFkTSlouG_1e-Mi7voOhyqybLj8dd3DfPlw&s",
-    informacion: [
-      "Curso intensivo de desarrollo web",
-      "Aprende las tecnologías más demandadas"
-    ],
-    materias: ["HTML y CSS", "JavaScript", "React", "Node.js"],
-    botones:[
-      {nombre:"Informacion", icono:"",url:""},
-      {nombre:"Duracion", icono:"",url:""}    
-    ]
-  };
+
 const crear_curso = (req, res) => {
-  const curso = new Cursos(req.body || datosCurso)
+  const curso = new Cursos(req.body)
   curso.save()
     .then(cursoGuardado => {
       res.status(201).json({ mensaje: "✅ Curso creado", curso: cursoGuardado })
@@ -58,11 +44,24 @@ const eliminar_curso = (req, res) => {
     })
     .catch(err => res.status(500).json({ error: err.message }))
 }
-
+const crear_cursos_prueba = (req, res,curso) => {
+ 
+  Cursos.insertMany(curso)
+    .then(cursosGuardados => {
+      res.status(201).json({ 
+        mensaje: `✅ ${cursosGuardados.length} cursos de prueba creados exitosamente`, 
+        cursos: cursosGuardados 
+      })
+    })
+    .catch(err => {
+      res.status(400).json({ error: err.message })
+    })
+}
 export{
     crear_curso,
     actualizar_curso,
     obtener_curso,
     obtener_cursos,
-    eliminar_curso
+    eliminar_curso,
+    crear_cursos_prueba
 }

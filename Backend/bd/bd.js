@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-const db = mongoose.connect("mongodb://localhost:27017/iae")
+const db = mongoose.connect("mongodb://localhost:27017/polomelo")
 .then(() => console.log('✅ Conectado a MongoDB'))
 .catch(err => console.error('❌ Error de conexión:', err))
 

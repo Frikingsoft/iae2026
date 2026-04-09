@@ -6,6 +6,20 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') ,name: 'inicio',}
     ]
   },
+    {
+    path: '/cursos',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Cursos.vue') ,name: 'cursos',}
+    ]
+  },
+  {
+    path: '/noticias',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Noticias.vue') }
+    ]
+  },
   {
     path: '/login',
     component: () => import('layouts/MainLayout.vue'),

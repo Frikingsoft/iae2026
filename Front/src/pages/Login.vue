@@ -49,8 +49,8 @@
 
         <!-- Sección de botones -->
         <div class="flex flex-center q-mt-md">
-          <q-btn label="Enviar" class="q-mr-md botones" />
-          <q-btn label="Registro" class="botones" @click="enviar_registro"/>
+          <q-btn label="Enviar" class="q-mr-xl botones bg-white" />
+          <q-btn label="Registro" class="botones bg-white" @click="enviar_registro"/>
         </div>
       </q-card>
     </div>
@@ -86,13 +86,14 @@
         color: white;
     }
     .botones{
-        color: white;
-        background-color: rgb(13, 50, 109);
-        width: 200px;
-        border-left: 2px solid rgb(101, 101, 101);
-        border-top: 2px solid rgb(101, 101, 101);
         box-shadow: 1px 1px 1px rgb(73, 73, 73),2px 2px 2px rgb(255, 255, 255),
-    3px 3px 3px rgb(101, 101, 101),4px 4px 2px rgb(255, 255, 255),5px 5px 2px rgb(15, 15, 15); 
+  3px 3px 3px rgb(42, 41, 41),4px 4px 2px rgb(255, 255, 255),5px 5px 2px rgb(15, 15, 15);
+  border-left: 1px solid rgba(151, 151, 151, 0.3);
+  border-top: 1px solid rgba(151, 151, 151, 0.3);
+  font-weight: bold;
+    color: rgb(13, 50, 109);
+    width: 30%;
+    max-width: 114px;
     }
     .botones:hover{
         background-color: white;

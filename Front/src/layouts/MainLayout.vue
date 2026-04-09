@@ -3,8 +3,8 @@
     <Menu/>
     <q-page-container>
       <div class="logo">
-        <img class="logo_iae" src="/iae.png">
-        <h3 class="texto"> Instituto de Alta Especialización </h3>
+        <img class="logo_iae" src="/logoPolo.png">
+        <h3 class="texto"> {{ titulo }}</h3>
         <img class="logo_utu" src="/logoutu.png">
       </div>
         <router-view />
@@ -15,6 +15,7 @@
 <script setup>
   import { provide, ref } from 'vue'
   import Menu from "../components/Menu.vue"
+  const titulo = ref("Polo Educativo Tecnológico Melo")
   const abrir_menu = ref(true)
   const mostrar_menu = ref(true)
   provide("abrir_menu",abrir_menu)
@@ -47,13 +48,14 @@
   }
   .logo_iae{
     width: 10%;
-    height: 60%;
+    height: 100%;
     margin-left: 20px;
     padding-top: 10px ;
     padding-bottom: 10px;   
   }
   .texto{
     position: absolute;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: center;

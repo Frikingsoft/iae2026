@@ -59,7 +59,8 @@
 </script>
 <style scoped>
    .fit{
-      background-color: rgb(15, 90, 117);    
+      background-color: rgb(15, 90, 117);
+          
    }
     
 
