@@ -7,16 +7,21 @@ import { Server } from "socket.io"
 const router = express.Router()
 const servidor = express()
 
-// ✅ AGREGAR ESTO: Configurar CORS antes de las rutas
+// Middlewares globales
 servidor.use(cors({
     origin: "*", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
 
-servidor.use(express.json()) // ✅ También importante para recibir JSON
+servidor.use(express.json())
+servidor.use(express.urlencoded({ extended: true }))
 
-servidor.use(router) // Las rutas después de CORS
+// También aplicar los mismos middlewares al router
+router.use(express.json())
+router.use(express.urlencoded({ extended: true }))
+
+servidor.use(router)
 
 const httpServer = createServer(servidor)
 const io = new Server(httpServer, {
@@ -33,5 +38,6 @@ httpServer.listen(PORT, () => {
 
 export {
     router,
+    servidor,
     io
 }

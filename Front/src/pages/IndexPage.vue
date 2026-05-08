@@ -1,5 +1,5 @@
 <template>
-  <q-page class="row justify-center q-mt-md">
+  <q-page class="row justify-center pagina">
     <Carousel/>
     <h2 class="col-12 flex flex-center texto"> Cursos   <q-icon name="fas fa-graduation-cap" color="#0D326D" class="q-ml-xl"/>
     
@@ -16,6 +16,9 @@ import Carousel from "../components/Carousel.vue"
 
 </script>
 <style scoped>
+.pagina{
+  margin-top: 120px;
+}
   .texto{
      font-size: 4rem;
     font-weight: bold;

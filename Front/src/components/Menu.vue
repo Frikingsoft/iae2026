@@ -59,8 +59,14 @@
 </script>
 <style scoped>
    .fit{
-      background-color: rgb(15, 90, 117);
-          
+      background-color: rgba(22, 22, 194, 0.91);
+       box-shadow: 0 0 1px rgb(3, 103, 252),0 0 2px rgb(3, 62, 150),0 0 3px rgb(255, 255, 255),
+        0 0 4px rgb(3, 62, 150),0 0 3px rgb(255, 255, 255), 3px 3px 4px rgb(3, 62, 150);
+       
+        backdrop-filter:  blur(10px);
+        box-shadow: 1px 1px 1px rgb(199, 199, 199), 2px 2px 2px grey
+        , 4px 4px 3px rgb(0, 0, 0),-1px -1px 1px rgb(199, 199, 199)
+        , -2px -2px 2px grey, -4px -4px 3px rgb(0, 0, 0);    
    }
     
 
